@@ -78,7 +78,11 @@ body {
     color: #fff;
 }
 
-.menu-item li:nth-child(3n) a::after {
+.menu-item li:hover{
+    color: #eee;
+}
+
+.menu-item li:nth-child(3n) a::after,  .guide-list li:nth-child(2)::after{
     content: "N";
     font-size: 0.2em;
     background: #E94E24;
@@ -86,6 +90,7 @@ body {
     position: absolute;
     padding: 2px 5px;
     margin-left: 3px;
+    color: #fff;
 }
 
 .login {
@@ -96,6 +101,10 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     margin-left: 220px;
+}
+
+.login:hover{
+    color: #00B067;
 }
 
 /* aside 영역 */
@@ -218,16 +227,6 @@ body {
     position: absolute;
 }
 
-/* .sponsor {
-    position: relative;
-}
-
-.linkage {
-    position: relative;
-} */
-
-/*  */
-
 .sponsor{
     padding: 110px 106px 70px 106px;
     height: 385px;
@@ -280,7 +279,7 @@ body {
 }
 
 .function p{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #797979;
     width: 500px;
 }
@@ -492,3 +491,255 @@ body {
     width: 1152px;
     height: 440px;
 }
+
+/* 보안영역 */
+
+.security{
+    height: 660px;
+    padding: 75px 0 0 160px;
+    /* background: brown; */
+}
+
+.security-heading{
+    float: left;
+    width: 700px;
+    margin-top: 180px;
+}
+
+.security p{
+    float: left;
+    width: 500px;
+}
+
+.security span{
+    background: purple url('../img/security-bg-item.PNG') no-repeat;
+    display: inline-block;
+    background-size: 290px;
+    height: 516px;
+    width: 290px;
+}
+
+/* promotion2 영역 */
+
+.promotion2{
+    height: 330px;
+    background: #00c473;
+    padding-top: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.promotion2 p{
+    font-size: 1.6rem;
+    color: #fff;
+    width: 460px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.promotion2 strong{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.promotion2-btn .btn{
+    top: 46px;
+    left: 415px;
+}
+
+.promotion2::before{
+    content: "";
+    position: absolute;
+    background: url('https://cdn.jandi.com/landing/assets/images/feature/assets-common/7e58f193.bg-sprite.png') no-repeat;
+    width: 316px;
+    height: 316px;
+    background-size: 316px;
+    left: -30px;
+    top: 65px;
+}
+
+.promotion2::after{
+    content: "";
+    position: absolute;
+    background: url('https://cdn.jandi.com/landing/assets/images/feature/assets-common/18847928.bg-sprite-v2.png') no-repeat;
+    background-size: 217px;
+    width: 217px;
+    height: 217px;
+    top: -50px;
+    right: 0;
+}
+
+/* 푸터영역 */
+
+.footer{
+    height: 170px;
+    background: #fff;
+    padding: 25px 90px 0 85px;
+    position: relative;
+}
+
+.footer-logo img{
+    width: 119px;
+    height: 17px;
+    float: left;
+}
+
+.guide-list li{
+    font-size: 1.4rem;
+    color: rgb(102, 102, 102);
+    float: left;
+    margin-left: 25px;
+}
+
+
+.language-list{
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 77px;
+    /* display: none; */
+    width: 10px;
+    height: 10px;
+}
+
+.language-list option{
+    width: 300px;
+}
+
+.etc{
+    padding-top: 10px;
+    font-size: 14px;
+    color: #999;
+    clear: both;
+}
+
+.etc span{
+    float: left;
+}
+
+.etc span:nth-child(-n+3)::after, .terms a:first-child::after {
+    content: "\007c";
+    padding: 0 3px;
+    color: #999;
+    font-weight: 400;
+}
+
+.address{
+    font-style: normal;
+}
+
+.ceo-name{
+    clear: both;
+}
+
+.terms{
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.tel{
+    position: absolute;
+    bottom: 40px;
+    right: 90px;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.tel::before{
+    content: "\e804";
+    font-family: 'fontello';
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.sns{
+    position: absolute;
+    bottom: 30px;
+    left: 85px;
+}
+
+.sns li{
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-right: 22px;
+    color: #666;
+}
+
+.sns li::before{
+    font-family: 'fontello';
+    margin-right: 5px;
+}
+
+.sns1::before{
+    content: '\f301';
+    color: #337ab7;
+}
+
+.sns2::before{
+    content: '\e803';
+    color: #E94E24;
+}
+
+.sns3::before{
+    content: '\f31b';
+    color: #007bb5;
+}
+
+.sns4::before{
+    content: '\f303';
+    color: #55acee;
+}
+
+/* dropdown btn */
+
+.dropdown {
+  float: right;
+  font-size: 1.6rem;
+  color: rgb(102, 102, 102);
+}
+
+.dropbtn::after {
+    font-family: 'fontello';
+    content: '\f106'; 
+    margin-left: 5px;
+}
+
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+    color: #666;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    color: #000;
+  }
+    
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 120px;
+    overflow: auto;
+    border:1px solid rgba(22, 74, 104, .25);
+    z-index: 1;
+    bottom: 150px;
+    text-align: center;
+    background: #fff;
+    font-size: 1.4rem;
+    padding: 2px;
+    border-radius: 3px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    height: 28px;
+  }
+  
+  .dropdown a:hover {
+    background-color: #eee;
+  }
+  
+  .show {display: block;}
