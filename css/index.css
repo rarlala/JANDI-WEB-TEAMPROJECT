@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 @import url('../css/fontello.css');
 
+/* 초기화 */
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +26,10 @@ html {
 
 body {
     background: #00C473;
+    overflow-x: hidden;
 }
+
+/* 영역 기본값 설정 */
 
 .a11y-hidden {
     position: absolute;
@@ -36,9 +41,12 @@ body {
     white-space: nowrap;
 }
 
+/* header 영역 */
+
 .header {
+    width: 1090px;
     height: 80px;
-    padding: 0 88px 0 95px;
+    margin: 0 88px 0 95px;
     background: #00C473;
     position: relative;
 }
@@ -107,53 +115,18 @@ body {
     color: #00B067;
 }
 
-/* aside 영역 */
-
-.intro {
-    background-image: url('https://cdn.jandi.com/landing/assets/images/main/baa3d8b4.top_bar_bg.png');
-    position: fixed;
-    width: 100%;
-    top: 0;
-    text-align: center;
-    color: #fff;
-    line-height: 50px;
-    height: 50px;
-    font-size: 1.4rem;
-    z-index: 10;
-}
-
-.intro-link {
-    background: #fff;
-    color: #46566D;
-    border-radius: 4px;
-    padding: 3px 13px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-left: 9px;
-}
-
-.icon-right::after {
-    font-family: 'fontello';
-    content: '\f105';
-    margin-left: 8px;
-}
-
-.icon-cancel {
-    float: right;
-    width: 40px;
-    height: auto;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 2em;
-}
-
 /* 메인 콘테이너 영역 */
+
+.main-container{
+    width: 1280px;
+    margin: 0 auto;
+}
 
 /* 프로모션 1 */
 .promotion1 {
     padding: 90px 90px 0 90px;
     height: 765px;
-    /* background: purple; */
+    position: relative;
 }
 
 .divider {
@@ -222,7 +195,7 @@ body {
     background-size: 700px;
     width: 700px;
     height: 620px;
-    bottom: -300px;
+    top: 140px;
     right: 20px;
     position: absolute;
 }
@@ -395,10 +368,10 @@ body {
 }
 
 .admin-menu-item li:hover{
-    box-shadow:  -3px 3px 10px 2px #eee;
+    box-shadow:  -3px 3px 10px 2px #ccc;
     border-radius: 15px;
     position: relative;
-    bottom: 2px;
+    bottom: 5px;
 }
 
 .admin-menu-item-icon1::after{
@@ -456,31 +429,33 @@ body {
 }
 
 .linkage-list li{
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 90px;
+    height: 90px;
     background: #fff;
-    box-shadow: -1px 1px 2px 2px #ddd;
-    margin-top: 10px;
+    box-shadow: 1px 1px 3px 1px rgba(125, 125, 125, 0.15);
     cursor: pointer;
 }
 
 .linkage-list li img{
-    width: 90px;
-    bottom: 0;
-    position: relative;
+    width: 70px;
+    height: 70px;
+    transform: translate(15%, 15%);
+    border-radius: 10px;
     transition: 245ms;
-    box-shadow: -1px 1px 10px 5px rgba(0, 0, 0, 0.15);
 }
 
 .linkage-list li:nth-child(n+2):hover{
     position: relative;
-    box-shadow: -6px 8px 10px 5px rgba(0, 0, 0, 0.15);
-    bottom: 2px;
+    box-shadow: 5px 5px 7px 3px rgba(125, 125, 125, 0.2);
+    bottom: 5px;
     transition: 245ms;
-    /* background: yellow; */
 }
 
-.selected{
-    box-shadow: 10px 10px 10px 10px #000;
+.linkage-list .selected{
+    position: relative;
+    bottom: 5px;
+    box-shadow: 5px 5px 7px 3px rgba(125, 125, 125, 0.2);
 }
 
 .linkage span{
@@ -572,7 +547,8 @@ body {
 /* 푸터영역 */
 
 .footer{
-    height: 170px;
+    width: 1280px;
+    height: 190px;
     background: #fff;
     padding: 25px 90px 0 85px;
     position: relative;
@@ -712,34 +688,77 @@ body {
     color: #666;
   }
   
-  .dropbtn:hover, .dropbtn:focus {
+
+.dropbtn:hover, .dropbtn:focus {
     color: #000;
-  }
+    outline: none;
+}
     
-  .dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
     min-width: 120px;
     overflow: auto;
     border:1px solid rgba(22, 74, 104, .25);
     z-index: 1;
-    bottom: 150px;
+    bottom: 165px;
     text-align: center;
     background: #fff;
     font-size: 1.4rem;
     padding: 2px;
     border-radius: 3px;
-  }
+}
   
-  .dropdown-content a {
+.dropdown-content a {
     color: black;
     text-decoration: none;
     display: block;
     height: 28px;
-  }
+}
   
-  .dropdown a:hover {
+.dropdown a:hover {
     background-color: #eee;
-  }
+}
   
-  .show {display: block;}
+.show {display: block;}
+
+/* aside 영역 */
+
+.intro {
+    background-image: url('https://cdn.jandi.com/landing/assets/images/main/baa3d8b4.top_bar_bg.png');
+    position: sticky;
+    width: 1280px;
+    top: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+    z-index: 100;
+}
+
+.intro-link {
+    background: #fff;
+    color: #46566D;
+    border-radius: 4px;
+    padding: 3px 13px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-left: 9px;
+}
+
+.icon-right::after {
+    font-family: 'fontello';
+    content: '\f105';
+    margin-left: 8px;
+}
+
+.icon-cancel {
+    float: right;
+    width: 40px;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2em;
+    margin-right: 15px;
+}
